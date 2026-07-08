@@ -1,0 +1,157 @@
+.navbar {
+    width: 100%;
+    height: 90px;
+    background: rgb(14, 13, 13);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.navbar .container {
+    display: flex;
+    gap: 20px; /* Reduced gap for better spacing */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.navbar .button-with-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px; /* Reduced margin for better spacing */
+}
+
+.navbar .btn {
+    font-size: 0.8em;
+    color: white;
+    background: rgb(146, 146, 12);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .btn:hover {
+    background: darkblue;
+}
+
+.navbar .selected {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.navbar .form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px 45px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEyIDZMMTAgOEw4IDYiLz48L3N2Zz4=') no-repeat right 10px center;
+    background-size: 40px;
+    margin-top: -20px;
+    width: 100%; /* Ensure full width */
+}
+
+.navbar .form-select:focus {
+    border-color: blue;
+}
+
+.navbar .form-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.button-label {
+    margin-top: 5px;
+    font-size: 14px; /* Slightly smaller font size */
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8em; /* Match button font size */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-toggle:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px; /* Ensure dropdown has a minimum width */
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item input {
+    margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allow navbar to grow in height */
+        padding: 10px;
+    }
+
+    .navbar .container {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .navbar .btn {
+        padding: 8px 16px; /* Smaller padding for smaller screens */
+        font-size: 0.7em; /* Smaller font size */
+    }
+
+    .button-label {
+        font-size: 12px; /* Smaller font size for labels */
+    }
+
+    .dropdown-toggle {
+        padding: 8px 16px; /* Smaller padding for dropdown toggle */
+    }
+}
